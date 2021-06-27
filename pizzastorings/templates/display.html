@@ -1,0 +1,126 @@
+{% load crispy_forms_tags %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>PizzaHut</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1" href="#">PizzaHut</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'index' %}"
+                >New Order</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'display' %}"
+                >View Orders</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% if messages %}
+    {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} m-2" id="msg" role="alert">
+              {{ message }}
+            </div>
+            <script type="text/javascript">
+              setTimeout(function () { location.reload(true); }, 1900);
+            </script>
+
+    {% endfor %}
+    
+  {% endif %}
+
+    <br>
+    {% if not data %}
+    <center>
+      <h6 class="display-6">
+        <span class="badge rounded-pill bg-warning">No Orders</span>
+      </h6>
+    </center>
+
+    {% else %}
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">SNo</th>
+          
+          <th scope="col">Pizza Type</th>
+          <th scope="col">Pizza Size</th>
+          <th scope="col">Toppings</th>
+          <th scope="col">Order ID</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      {% for d in data %}
+        
+      <tbody>
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          
+          <td>{{ d.pizzatype }}</td>
+          <td>{{ d.pizzasize }}</td>
+          <td>{{ d.ontoppings }}</td>
+          <th scope="row">{{ d.id }}</th>
+          <td>
+            <a href="/update/{{ d.id }}">
+              <button type="button" class="btn btn-success">Update Order</button>
+            </a>
+
+          </td>
+          <td>
+            <a href="/delete/{{ d.id }}">
+              <button type="submit" class="btn btn-danger">
+                Delete Order
+              </button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+      {% endfor %}
+      {% endif %}
+    </table>
+    <script>
+      setTimeout(function(){
+        if ($('#msg').length > 0){
+          $('#msg').remove();
+        }
+      }, 2000)
+    </script>
+  </body>
+</html>
