@@ -58,7 +58,7 @@
               {{ message }}
             </div>
             <script type="text/javascript">
-              setTimeout(function () { location.reload(true); }, 1900);
+              setTimeout(function () { location.reload(true); }, 3000);
             </script>
 
     {% endfor %}
@@ -115,12 +115,5 @@
       {% endfor %}
       {% endif %}
     </table>
-    <script>
-      setTimeout(function(){
-        if ($('#msg').length > 0){
-          $('#msg').remove();
-        }
-      }, 2000)
-    </script>
   </body>
 </html>
