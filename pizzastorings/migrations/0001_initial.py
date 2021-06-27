@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Pizza',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('pizzatype', models.CharField(choices=[('Rectange', 'Rectangle'), ('Square', 'Square')], max_length=10, verbose_name='Pizza Type')),
+                ('pizzatype', models.CharField(choices=[('Regular', 'Regular'), ('Square', 'Square')], max_length=10, verbose_name='Pizza Type')),
                 ('pizzasize', models.CharField(choices=[('Small', 'Small'), ('Medium', 'Medium'), ('Large', 'Large')], max_length=10, verbose_name='Size of Pizza')),
                 ('ontoppings', models.CharField(choices=[('Onion', 'Onion'), ('Tomato', 'Tomato'), ('Corn', 'Corn'), ('Capsicum', 'Capsicum'), ('Cheese', 'Cheese'), ('Jalapeno', 'Jalapeno')], max_length=20, verbose_name='Toppings')),
             ],

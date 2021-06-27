@@ -4,7 +4,7 @@ from multiselectfield import MultiSelectField
 # Create your models here.
 class Pizza(models.Model):
     types = (
-        ('Rectange', 'Rectangle'),
+        ('Regular', 'Regular'),
         ('Square', 'Square')
     )
     toppings =(
