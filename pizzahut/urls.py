@@ -19,5 +19,6 @@ import pizzastorings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pizzastorings.urls'))
+    path('api/', include('pizzastorings.urls')),
+    path('', include('frontend.urls'))
 ]

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'pizzastorings',
     'crispy_forms',
     'multiselectfield',
-    'rest_framework'
+    'rest_framework',
+    'frontend'
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [

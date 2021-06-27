@@ -1,14 +1,11 @@
-
 from django.urls import path
-from .views import index, success, display, delete, update, cancelupdate, successupdate
+from . import views
 
 urlpatterns = [
-    path('', index, name="index"),
-    path('success/', success, name="success"),
-    path('display/', display, name="display"),
-    path('delete/<int:id>', delete, name="delete"),
-    path('update/<int:id>', update, name="update"),
-    path('cancelUpdate/', cancelupdate, name="cancelupdate"),
-    path('successupdate/', successupdate, name="successupdate")
-
+    path('', views.apiOverview, name="apioverview"),
+    path('pizza-list/', views.pizzalist, name="pizzalist"),
+    path('pizza-create/', views.createpizza, name="createpizza"),
+    path('pizza-update/<int:id>/', views.updatepizza, name="updatepizza"),
+    path('pizza-delete/<int:id>/', views.deletepizza, name="deletepizza"),
+    path('pizza-detail/<int:id>', views.pizzadetail, name="detailview")
 ]
