@@ -11,6 +11,7 @@
     - ```.\venv\scripts\activate```
   - Now with the help of requirements.txt file Install the required libraries 
   - the run the following commands
+    - ```pip install requirements.txt```
     - ```python manage.py makemigrations```
     - ```python manage.py migrate```
     - ```python manage.py runserver```
@@ -23,7 +24,13 @@
 	  mentioned above, the user should be allowed to add any type of topping at any point of time)
   - Want to do
     - API
-      - [ ] Create an API endpoint to create regular pizza and a square pizza.
-      - [ ] Create an API endpoint which lists the information about all the stored pizza, the response of this should also contain the information about the toppings, size and type of Pizza.
+      - [x] Create an API endpoint to create regular pizza and a square pizza.
+      - [x] Create an API endpoint which lists the information about all the stored pizza, the response of this should also contain the information about the toppings, size and type of Pizza.
       - [ ] Allow filtering the list of pizza returned by the API based on Size & Type of Pizza.
-      - [ ] Create an API endpoint that allows the user to edit or delete any pizza from the database. an API 
+      - [x] Create an API endpoint that allows the user to edit or delete any pizza from the database.
+
+
+# Note:
+    - The django project will run in http://127.0.0.1:8000/ only
+    - It will not take the url http://localhost:8000/ 
+    
