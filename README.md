@@ -1,6 +1,6 @@
 # PizzaStoreDjangoProject
 
-### This is a Django Project with REST API (want to implement)
+### This is a Django Project with REST API 
 ### Prerequisites - Python and MongoDB should be installed in system 
 
 ## Steps to run this project
@@ -33,4 +33,11 @@
 # Note:
     - The django project will run in http://127.0.0.1:8000/ only
     - It will not take the url http://localhost:8000/ 
+    
+ # API Documentation
+ -  "Pizzalist": "/pizza-list/",   For displaying all the pizza orders
+ -  "Detail View": "/pizza-detail/<int:pk>/",   For display a particular pizza order
+ -  "Create": "/pizza-create/",  To create a new pizza order
+ -  "Update": "/pizza-update/<int:pk>/", To update a pizza order
+ -  "Delete": "/pizza-delete/<int:pk>/", To delete an order
     
