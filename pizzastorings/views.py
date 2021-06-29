@@ -54,12 +54,6 @@ def deletepizza(request, id):
     pizza.delete()
     return Response("Deleted successfully")
 
-def displayPizza(request):
-    pizzas = Pizza.objects.all()
-    serializer = PizzaSerializers(pizzas, many=True)
-    #return JsonResponse(serializer.data, safe=False)
-    return HttpResponse(json.dumps(serializer.data), content_type="application/json")
-
 @api_view(['GET'])
 def pizzadetail(request, id):
     pizza = Pizza.objects.get(id=id)
