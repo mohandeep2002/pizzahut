@@ -150,9 +150,7 @@ Django REST framework is a powerful and flexible toolkit for building Web API's.
   - Completed Taks
     - [x] A Pizza can be of multiple types: Regular or Square
     - [x] A Pizza can be of multiple sizes: Small, Medium, Large, etc. 
-    - [x] A Pizza can consist of many toppings out of the following (Onion, Tomato, Corn, Capsicum, Cheese, Jalapeno etc.), the choice of toppings should not be limited to the ones 
-	  mentioned above, the user should be allowed to add any type of topping at any point of time)
-  - Want to do
+    - [x] A Pizza can consist of many toppings out of the following (Onion, Tomato, Corn, Capsicum, Cheese, Jalapeno etc.), the choice of toppings should not be limited to the ones mentioned above, the user should be allowed to add any type of topping at any point of time)
     - API
       - [x] Create an API endpoint to create regular pizza and a square pizza.
       - [x] Create an API endpoint which lists the information about all the stored pizza, the response of this should also contain the information about the toppings, size and type of Pizza.
